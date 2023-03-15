@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+<div id="root" class="flex flex-col min-h-screen p-16">
+
+    <!-- code goes below -->
+    <main class="grow flex flex-col items-center justify-center">
+        <h1 class="text-center text-2xl mt-5 font-bold my-4">OpenAI Completions API</h1>
+        <h2 class="text-center text-xl mt-5 my-4">translate SQL</h2>
+        <section class="dialogue-section w-full max-w-3xl border-2 border-gray-200 rounded-md p-4 h-96 overflow-scroll">
+            <ul id="dialogue" class="flex flex-col space-y-4">
+                <li class="bg-gray-100 rounded p-2 w-fit self-start break-words">
+                        Hi there 👋 Put in natural language and I'll translate it to SQL for you!
+                </li>
+            </ul>
+        </section>
+        <section class="prompt-section my-4 w-full max-w-3xl">
+            <div class="prompt-input-section flex flex-col">
+                <form id="prompt-form">
+                    <label for="prompt-input" class="block text-gray-700 text-sm font-bold mb-2">Enter your question</label>
+                    <textarea
+                              id="prompt-input"
+                              name="prompt"
+                              cols="38"
+                              rows="3"
+                              placeholder="Select all students older than 25."
+                              class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-3 text-gray-700"
+                              ></textarea>
+                    <button type="submit"
+                            class="my-4 bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- code goes above-->
+    <script src="app/index.js" type="module"></script>
+</div>
+</body>
+
+</html>
